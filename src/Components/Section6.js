@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 const Section6 = ({ height, width }) => {
+  const formRef = useRef(null);
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbyEbhPoEcUOwrW_6R1p7wKXK0DmCFEpsOmr9It2tuy9kBtXylcZlQlSev18FM0IycRAoA/exec";
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch(scriptUrl, { method: "POST", body: new FormData(formRef.current) })
+      .then((res) => {
+        console.log("SUCCESSFULLY SUBMITTED");
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <section
       style={{ height: height, width: width, backgroundColor: "#141414" }}
@@ -11,8 +25,10 @@ const Section6 = ({ height, width }) => {
         </p>
         <div className="min-h-1/2">
           <form
-            action=""
             className="flex flex-col gap-8 w-[340px] m-auto mt-[30px] items-center"
+            onSubmit={handleSubmit}
+            ref={formRef}
+            name="waiting-list"
           >
             <p className=" text-white text-[36px] font-semibold text-center whitespace-nowrap ">
               feedback!
@@ -37,6 +53,7 @@ const Section6 = ({ height, width }) => {
       "
               rows="5"
               placeholder="How did you like the ROAR experience?"
+              name="Feedback"
             ></textarea>
             <button
               className="btn w-[222px] h-[65px] bg-[#FEE998] text-black rounded-full mt-[100px]"
