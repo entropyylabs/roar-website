@@ -11,7 +11,7 @@ const Section3 = ({ height, width }) => {
           <img src={phone} className="h-[499px] w-[261px]" alt="" srcset="" />
         </div>
 
-        <p className="w-[371px] h-[172px] text-[#EE7D79] text-[36px] font-semibold p-2 text-center">
+        <p className="w-full h-[172px] text-[#EE7D79] text-[36px] font-semibold p-2 text-center">
           collectibles from your favourite brands
         </p>
       </div>
