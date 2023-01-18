@@ -19,6 +19,7 @@ const Section5 = ({ height, width }) => {
   };
 
   const [user, setUser] = useState(false);
+  const [ios, setIos] = useState(false);
 
   return (
     <section
@@ -138,9 +139,16 @@ const Section5 = ({ height, width }) => {
             <button
               className="btn w-[222px] p-4 bg-[#141414] text-white rounded-full"
               type="submit"
+              onClick={() => setIos(true)}
             >
               <i class="fa-brands fa-apple"></i> &nbsp; iOS Testflight
             </button>
+            {ios && (
+              <span className="bg-[#EE7D79] p-4">
+                <i class="fa-solid fa-triangle-exclamation"></i> &nbsp;You'll
+                get a testflight invite soon!
+              </span>
+            )}
           </div>
         )}
       </div>
