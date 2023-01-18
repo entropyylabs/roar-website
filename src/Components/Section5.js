@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import logo from "../Assets/logo.png";
+import RoarAPK from "../Roar.apk";
 
 const Section5 = ({ height, width }) => {
   const formRef = useRef(null);
@@ -22,6 +23,7 @@ const Section5 = ({ height, width }) => {
   return (
     <section
       style={{ height: height, width: width, backgroundColor: "#FEE998" }}
+      id="download"
     >
       <div className="flex flex-col pt-[110px]">
         <img
@@ -128,6 +130,7 @@ const Section5 = ({ height, width }) => {
           <div className="flex flex-col gap-8 w-[364px] m-auto mt-[30px] items-center">
             <a
               className="btn w-[222px] bg-[#141414] p-4 text-white rounded-full text-center align-middle"
+              href={RoarAPK}
               download="Roar.apk"
             >
               <i class="fa-brands fa-android"></i> &nbsp; Download APK

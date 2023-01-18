@@ -11,7 +11,9 @@ const Section1 = ({ height, width }) => {
           <div className="flex flex-row justify-between p-5 items-center">
             <a href="http://entropylabs.biz">by entropy labs</a>
             <div className="w-[48px] h-[48px] bg-black rounded-full flex justify-center items-center">
-              <i className="fa-solid fa-download text-white"></i>
+              <a href="#download">
+                <i className="fa-solid fa-download text-white"></i>
+              </a>
             </div>
           </div>
         </div>
