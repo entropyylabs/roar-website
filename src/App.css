@@ -18,3 +18,43 @@ html,
 body {
   overflow-x: hidden;
 }
+
+.mobile-light,
+.mobile-dark {
+  position: relative;
+  display: inline-block;
+  border-radius: 60px;
+  padding: 80px 24px;
+}
+
+.mobile-light {
+  height: 800px;
+  background: #f0f0f0;
+  background: linear-gradient(135deg, #f0f0f0, #fafafa);
+}
+
+.mobile-dark {
+  height: 750px;
+  background: #333333;
+  background: linear-gradient(135deg, #333333, #4e4d4d);
+}
+
+.mobile-dark:before,
+.mobile-light:before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+.mobile-light:before {
+  background-color: #d7d7d7;
+}
+
+.mobile-dark:before {
+  background-color: #4e4d4d;
+}
