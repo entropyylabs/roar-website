@@ -8,13 +8,21 @@ const Section4 = ({ height, width }) => {
         height: height,
         width: width,
         backgroundColor: "#9CC3DA",
+        overflow: "hidden",
       }}
       className="relative"
     >
       <p className="absolute z-50 top-1/3 w-full text-[#FEE998] text-[64px] font-semibold p-2 mt-2 text-center">
         you’ll be a part of the ROAR gang now wohooo
       </p>
-      <img src={section4} alt="" srcset="" className="absolute z-10" />
+      <img
+        src={section4}
+        height={height}
+        width={width}
+        alt=""
+        srcset=""
+        className="absolute z-10"
+      />
     </section>
   );
 };
