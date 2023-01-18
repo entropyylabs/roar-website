@@ -12,7 +12,7 @@ const Section4 = ({ height, width }) => {
       }}
       className="relative"
     >
-      <p className="absolute z-50 top-1/3 w-full text-[#FEE998] text-[64px] font-semibold p-2 mt-2 text-center">
+      <p className="absolute z-50 top-1/2 w-full text-[#FEE998] text-4xl font-semibold p-2 mt-2 text-center">
         you’ll be a part of the ROAR gang now wohooo
       </p>
       <img
