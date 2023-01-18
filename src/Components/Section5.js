@@ -109,7 +109,7 @@ const Section5 = ({ height, width }) => {
                 name="Platform"
                 required
               >
-                <option selected disabled className="text-[#9BA3AF]">
+                <option value="" selected disabled className="text-[#9BA3AF]">
                   Android or iOS?
                 </option>
                 <option value="Android">Android</option>
